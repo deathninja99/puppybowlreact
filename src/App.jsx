@@ -1,15 +1,16 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
-import { Puppies } from "./assets/components/puppies";
+import { Route, Routes } from "react-router-dom";
+import Alldogs from "./assets/components/allPups";
 function App() {
   return (
     <div className="App">
-      {/* <nav /> */}
-      {/* <submitPup /> */}
-      <Puppies />
-      {/* <footer /> */}
+      <Routes>
+        {/* <nav /> */}
+        {/* <submitPup /> */}
+        <Route path="/" element={<Alldogs />} />
+        {/* <Route path="/:id" element={<Singledog></Singledog>} /> */}
+        {/* <footer /> */}
+      </Routes>
     </div>
   );
 }
